@@ -22,9 +22,9 @@ db:
   volumes:
    - ./mysql:/var/lib/mysql
   environment:
-   - DB_NAME=dbName
-   - DB_USER=myUser
-   - DB_PASS=myPass
+   - MYSQL_DATABASE=dbName
+   - MYSQL_USER=myUser
+   - MYSQL_ROOT_PASSWORD=myPass
 phpmyadmin:
   image: corbinu/docker-phpmyadmin
   links:
