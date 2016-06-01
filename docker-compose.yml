@@ -8,7 +8,7 @@ web:
   links:
     - php
 php:
-  image: zendyani/php:7.0.7-fpm-alpine-extended
+  image: zendyani/php:7.0.7-fpm-alpine-extended-gd
   volumes:
     - ./www:/var/www
     # - ./config/php-fpm.conf:/usr/local/etc/php-fpm.conf
@@ -23,7 +23,6 @@ db:
    - ./mysql:/var/lib/mysql
   environment:
    - MYSQL_DATABASE=dbName
-   - MYSQL_USER=myUser
    - MYSQL_ROOT_PASSWORD=myPass
 phpmyadmin:
   image: corbinu/docker-phpmyadmin
