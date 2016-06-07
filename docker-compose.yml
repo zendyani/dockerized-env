@@ -21,6 +21,7 @@ db:
   image: mysql
   volumes:
    - ./mysql:/var/lib/mysql
+   - ./config/sql:/docker-entrypoint-initdb.d/ # sql files to be xecuted in the first run
   environment:
    - MYSQL_DATABASE=dbName
    - MYSQL_ROOT_PASSWORD=myPass
